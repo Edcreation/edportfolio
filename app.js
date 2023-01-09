@@ -6,7 +6,7 @@ const flash = require('connect-flash');
 const session = require('express-session');
 const cookieParser = require('cookie-parser');
 // Routes
-const contacts = require('./routes/Contacts');
+const contacts = require('./routes/contacts');
 const messages = require('./routes/messages');
 const dashboard = require('./routes/dashboard');
 const newb = require('./routes/new');
