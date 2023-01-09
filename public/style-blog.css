@@ -32,13 +32,14 @@
     padding: 20px;
     overflow-x: scroll;
     scroll-behavior: smooth;
-    background: rgb(224, 224, 224);
+    /*background: rgb(224, 224, 224);*/
     
 }
 
 .blog-card {
     background: #010756;
     color: #fff;
+    border: 0.9px solid #fff;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
