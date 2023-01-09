@@ -1,6 +1,6 @@
 const { Router } = require('express');
 const app = Router();
-const Contact = require('../Models/contactModel')
+const Contact = require('../models/contactModel')
 bodyParser = require("body-parser");
 app.use(bodyParser.urlencoded({ extended: true }));
 

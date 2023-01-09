@@ -1,6 +1,6 @@
 const { Router } = require('express');
 const app = Router();
-const Blog = require('../Models/blogsModel')
+const Blog = require('../models/blogsModel')
 const { marked } = require('marked');
 
 function isLoggedIn(req, res, next) {

@@ -1,6 +1,6 @@
 const { Router } = require('express');
 const app = Router();
-const User = require('../Models/usersModel');
+const User = require('../models/usersModel');
 const passport = require("passport");
 const LocalStrategy = require("passport-local");
 const passportLocalMongoose = require("passport-local-mongoose");

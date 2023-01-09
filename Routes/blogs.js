@@ -1,7 +1,7 @@
 const { Router } = require('express');
 const mongoose = require('mongoose')
 const app = Router();
-const blogs = require('../Models/blogsModel')
+const blogs = require('../models/blogsModel')
 bodyParser = require("body-parser");
 app.use(bodyParser.urlencoded({ extended: true }));
 

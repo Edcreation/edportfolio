@@ -6,14 +6,14 @@ const flash = require('connect-flash');
 const session = require('express-session');
 const cookieParser = require('cookie-parser');
 // Routes
-const contacts = require('./Routes/Contacts');
-const messages = require('./Routes/messages');
-const dashboard = require('./Routes/dashboard');
-const newb = require('./Routes/new');
-const login = require('./Routes/login');
-const signup = require('./Routes/signup')
-const blog = require('./Routes/blog')
-const blogs = require('./Routes/blogs')
+const contacts = require('./routes/Contacts');
+const messages = require('./routes/messages');
+const dashboard = require('./routes/dashboard');
+const newb = require('./routes/new');
+const login = require('./routes/login');
+const signup = require('./routes/signup')
+const blog = require('./routes/blog')
+const blogs = require('./routes/blogs')
 const dotenv = require("dotenv");
 dotenv.config();
 
