@@ -1,6 +1,6 @@
 const { Router } = require('express');
 const app = Router();
-const Contact = require('./models/contactModel')
+const Contact = require('../models/contactModel')
 app.get('/contacts', (req, res) => {
     const pop = req.flash('pop-up')
     res.render('contacts', { pop })
