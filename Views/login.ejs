@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="/images/icon.png" >
+    <title>Login</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style-login.css">
+</head>
+<body>
+    <%- include("./partials/navbar") %>
+    <div class="login-container">
+        <div class="container-box">
+            <div class="left">
+                <div class="lock">
+                    <img src="./images/Lock.png" alt="Lock">
+                </div>
+            </div>
+            <div class="right">
+                <% if(pop != '') { %>
+                    <% if(pop == 'Done!! Logged In') { %>
+                        <p id="pop-up"><%= pop %></p>
+                        <script>
+                            setTimeout(() => {
+                                const pop = document.getElementById('pop-up')
+                                pop.style.display="none";
+                              }, 5000);
+                        </script>
+                    <% }  %>
+                    <% if(pop == 'Failed!! Try Again') { %>
+                        <p id="pop-up" style="background: rgb(139, 3, 3);"><%= pop %></p>
+                        <script>
+                            setTimeout(() => {
+                                const pop = document.getElementById('pop-up')
+                                pop.style.display="none";
+                              }, 5000);
+                        </script>
+                    <% }  %>
+                <% } %>
+                <form action="/login" method="post">
+                    <div class="title">LOG IN</div>
+                    <input type="text" name="username" id="name" placeholder="User Name" required>
+                    <input type="password" name="password" id="pass" placeholder="Password" required>
+                    <button>Log In</button> <a href="/signup">Sign Up</a>
+                </form>
+            </div>
+        </div>
+    </div>
+    <%- include("./partials/footer") %>
+    
+</body>
+</html>
