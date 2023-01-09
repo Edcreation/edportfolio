@@ -1,7 +1,7 @@
 const express = require('express')
 const bodyParser = require("body-parser");
 const app = express()
-const port = 5000
+const PORT = process.env.PORT || 5000
 const flash = require('connect-flash');
 const session = require('express-session');
 const cookieParser = require('cookie-parser');
@@ -14,6 +14,9 @@ const login = require('./Routes/login');
 const signup = require('./Routes/signup')
 const blog = require('./Routes/blog')
 const blogs = require('./Routes/blogs')
+const dotenv = require("dotenv");
+dotenv.config();
+
 
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({
@@ -32,7 +35,7 @@ app.set('view engine', 'ejs');
 // Connectiing to mongoose
 const mongoose = require('mongoose');
 mongoose.connect(
-    "mongodb+srv://eddy:12345@cluster0.faeyj0r.mongodb.net/?retryWrites=true&w=majority",
+    process.env.MONGO_KEY,
     {
       dbName: "Portfolio",
       useNewUrlParser: true,
@@ -54,4 +57,4 @@ app.get('/', (req, res) => {
     res.render('index')
 })
 
-app.listen(port, () => console.log(`App listening on port ${port}!`))
+app.listen(PORT, () => console.log(`App listening on port ${PORT}!`))
