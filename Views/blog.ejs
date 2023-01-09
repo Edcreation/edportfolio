@@ -23,6 +23,27 @@
         <div class="blog-content">
             <%- blog.content %>
         </div>
+        <div class="comments">
+            <div class="comment">
+                <div class="com-name">Commenter's name</div>
+                <div class="com-content">
+                    Lorem ipsum dolor, 
+                    sit amet consectetur adipisicing elit. 
+                    Repudiandae ab maxime veritatis labore eveniet.
+                </div>
+                <div class="com-date">09/01/2023</div>
+            </div>
+        </div>
+        <div class="com-form">
+            <form action="">
+                <div class="com-form-title">Leave a Comment</div>
+                <p>Name Here:</p>
+                <input type="text" name="com-name" id="cname">
+                <p>Comment:</p>
+                <textarea name="com-content" id="ccontent" cols="30" rows="10"></textarea>
+                <button>Comment</button>
+            </form>
+        </div>
     </div>
     <%- include("./partials/footer") %>
 </body>

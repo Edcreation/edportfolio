@@ -2,6 +2,10 @@ const { Router } = require('express');
 const app = Router();
 const Blog = require('../models/blogsModel')
 const { marked } = require('marked');
+const multer = require('multer');
+const storage = multer.memoryStorage();
+const upload = multer({ storage: storage });
+
 
 function isLoggedIn(req, res, next) {
     if (req.isAuthenticated()) return next();
@@ -23,6 +27,10 @@ app.post('/dashboard/new', (req,res) => {
         return word;
     }
     const bid = generateRandomWord(12);
+    /*const image = {
+        contentType: req.file.mimetype,
+        image: req.file.buffer
+    };*/
     const content = marked(req.body.content)
     const title = req.body.title;
     const done = "Created!!"
