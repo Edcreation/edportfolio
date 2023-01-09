@@ -1,0 +1,253 @@
+<nav>
+    <script>
+        let open = false;    
+function toggleNav(){
+  if(open==false){
+      navUl = document.getElementById("actions");
+      navUl.style.display="block";
+      open = true;
+  }else{
+        navUl = document.getElementById("actions");
+        navUl.style.display="none";
+        open = false; 
+  }
+}
+function toggleDashNav() {
+  if(open==false){
+    navUl = document.getElementById("dash-nav");
+    navUl.style.display="flex";
+    open = true;
+}else{
+      navUl = document.getElementById("dash-nav");
+      navUl.style.display="none";
+      open = false; 
+}
+}
+
+setTimeout(() => {
+  const pop = document.getElementById('pop-up')
+  pop.style.display="none";
+}, 5000);
+    </script>
+    <div class="logo">
+        <a href="/"><img src="/images/ED.png" alt="logo"></a>
+        <div class="menu" onclick="toggleNav()">
+            <img src="/images/menu.png" alt="">
+        </div>
+    </div>
+    <div id="actions" >
+        <div class="links">
+            <a href="/#about-me">About Me</a>
+            <a href="/#skills" >Skills</a>
+            <a href="/blogs">Blog</a>
+            <a href="/contacts">Contacts</a>
+        </div>
+        <div class="login">
+            <a href="/login"><button>Login</button></a>            </div>
+    </div>
+</nav>
+<style>
+    @keyframes slideInFromLeft {
+        0% {
+          transform: translateX(-100%);
+        }
+        100% {
+          transform: translateX(0);
+        }
+      }
+    
+    nav {
+        width: 100%;
+        height: 60px;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        align-items: center;
+        background: #02041E;
+        font-weight: 600;
+        letter-spacing: 0.8px;
+        z-index: 4;
+        top: 0;
+        position: sticky;
+        
+    
+    }
+    #actions {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 0;
+        
+    }
+    .links {
+        margin-left: 10px;
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        font-family: Arial, Helvetica, sans-serif;
+        transition: .8s;
+    }
+    .links a {
+        padding: 10px;
+        text-decoration: none;
+        color: #fff;
+        transition: 0.8s;
+    }
+    .links a:hover {
+        background: #00DAE8;
+        color: #000;
+    }
+    #active {
+        color: #00DAE8;
+    }
+    #active:hover {
+        color: #000;
+    }
+    .login {
+        display: flex;
+        justify-content: center;
+        margin-right: 30px;
+    }
+    nav button {
+        height: 30px;
+        width: 70px;
+        text-align: center;
+        align-items: center;
+        margin-left: 30px;
+        font-size: 17px;
+        font-weight: bold;
+        background-color: #00DAE8;
+        border-radius: 8px;
+        transition: 0.6s;
+        border: none;
+        cursor: pointer;
+    }
+    nav button:hover {
+        background: #02041E;
+        color: #00DAE8;
+        outline: 1px solid;
+    }
+    nav .logo {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    nav .logo a{
+        transition: .8s;
+    }
+    nav .logo img{
+        width: 80px;
+        cursor: pointer;
+        margin-left: 30px;
+        transition: 0.9s;
+    }
+    nav .logo:nth-child(1) a:hover {
+        scale: 1.5;
+    }
+    nav .logo .menu {
+        display: none;
+        margin-right: 30px;
+    }
+    nav .menu img{
+        width: 30px;
+        height: 30px;
+    }
+     @-webkit-keyframes slide-right {
+        0% {
+          -webkit-transform: translateX(0);
+                  transform: translateX(0);
+        }
+        100% {
+          -webkit-transform: translateX(100px);
+                  transform: translateX(100px);
+        }
+      }
+      @keyframes slide-right {
+        0% {
+          -webkit-transform: translateX(0);
+                  transform: translateX(0);
+        }
+        100% {
+          -webkit-transform: translateX(100%);
+                  transform: translateX(100%);
+        }
+      }
+     @-webkit-keyframes slide-out-left {
+        0% {
+          -webkit-transform: translateX(0);
+                  transform: translateX(0);
+          opacity: 1;
+        }
+        100% {
+          -webkit-transform: translateX(-1000px);
+                  transform: translateX(-1000px);
+          opacity: 0;
+        }
+      }
+      @keyframes slide-out-left {
+        0% {
+          -webkit-transform: translateX(0);
+                  transform: translateX(0);
+          opacity: 1;
+        }
+        100% {
+          -webkit-transform: translateX(-1000px);
+                  transform: translateX(-1000px);
+          opacity: 0;
+        }
+      }
+      @media screen and  (max-width: 700px) {
+        .slide-right {
+            -webkit-animation: slide-right 0.5s cubic-bezier(0.600, -0.280, 0.735, 0.045) both;
+                    animation: slide-right 0.5s cubic-bezier(0.600, -0.280, 0.735, 0.045) both;
+        }
+    
+        nav  {
+            display: flex;
+            flex-direction: column;
+        }
+        nav .logo {
+            width: 100%;
+            height: 50px;
+            padding: 20px 0 0 0;
+            justify-content: space-between;
+        }
+        nav .links {
+            flex-direction: column;
+            width: auto;
+        }
+    
+        #actions {
+            display: none;
+            width: 100%;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            background: #05092E;
+            right: 0;
+            animation: slideInFromLeft .8s;
+        }
+        .login {
+            justify-content: center;
+            align-items: center;
+            margin-right: 0;
+        }
+        nav  button {
+            margin: 10px 0 20px 0;
+            align-self: center;
+        }
+        .links {
+            margin-bottom: 10px;
+            margin-left: 0;
+            justify-content: center;
+            align-items: center;
+        }
+        nav .logo .menu {
+            display: block;
+        }
+    }
+
+</style>
