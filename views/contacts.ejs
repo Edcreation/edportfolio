@@ -13,6 +13,14 @@
 </head>
 <body>
     <%- include("./partials/navbar") %>
+    <%- include('./partials/loading') %>
+    <script>
+            document.getElementById('loading').style.display = 'flex';
+            // Hide the loading screen when the page is fully loaded
+            window.onload = function() {
+            document.getElementById('loading').style.display = 'none';
+            }
+    </script>
     <div class="contacts">
         <% if(pop != '') { %>
             <% if(pop == 'Done!!') { %>
