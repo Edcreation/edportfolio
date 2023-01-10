@@ -19,7 +19,7 @@
             <div class="blog-cards">
                 <% for(let i = 0; i < blog.length ; i++) { %> 
                 <a class="blog-card" href="/blog/<%=blog[i].bid %>">
-                    <div class="image"><img src="./images/img1.jpg" alt="image"></div>
+                    <div class="image"><img src="./images/<%- blog[i].image  %>" alt="image"></div>
                     <div class="over">
                         <div class="text">
                             <%= blog[i].title  %> 

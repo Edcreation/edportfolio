@@ -16,7 +16,7 @@ app.get('/blogs', (req, res) => {
           blog.reverse();
           res.render('blogs', { blog: blog, pop });
         }
-    }).limit(4);
+    }).limit(6);
 })
 
 module.exports = app;
