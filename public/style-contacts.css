@@ -139,6 +139,9 @@ form .icons {
         margin-bottom: 20px;
     }
     .gmap_canvas{
-        border-radius: 0px;    
+        border-radius: 0px;   
+    }
+    .mapouter {
+        width: 80%; 
     }
 }
