@@ -11,7 +11,7 @@ app.get('/blogs', (req, res) => {
     blogs.find({}, (err, blog) => {
         if (err) {
           console.error(err);
-          res.send('Error');
+          res.render('error');
         } else {
           blog.reverse();
           res.render('blogs', { blog: blog, pop });
