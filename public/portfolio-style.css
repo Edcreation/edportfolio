@@ -145,6 +145,7 @@
     align-items: center;
     background: rgba(0, 0, 0, 0.535);
     border-radius: 5px;
+    border: 1px solid rgba(255, 255, 255, 0.197);
     transition: transform 0.8s ease-in-out;
     animation: 1s ease-out 0s 1 slideInFromTop;
 }
