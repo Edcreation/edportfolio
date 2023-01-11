@@ -1,0 +1,37 @@
+<div id="dash-nav">
+    <a href="/dashboard">Dashboard</a>
+    <a href="/dashboard/new">New Blog</a>
+    <a href="/dashboard/messages">Messages</a>
+    <a href="">Settings</a>
+</div>
+<span onclick="toggleDashNav()"><img src="../images/menu2.png" alt="menu"></span>
+<script>
+    let open = false;    
+function toggleNav(){
+if(open==false){
+  navUl = document.getElementById("actions");
+  navUl.style.display="block";
+  open = true;
+}else{
+    navUl = document.getElementById("actions");
+    navUl.style.display="none";
+    open = false; 
+}
+}
+function toggleDashNav() {
+if(open==false){
+navUl = document.getElementById("dash-nav");
+navUl.style.display="flex";
+open = true;
+}else{
+  navUl = document.getElementById("dash-nav");
+  navUl.style.display="none";
+  open = false; 
+}
+}
+
+setTimeout(() => {
+const pop = document.getElementById('pop-up')
+pop.style.display="none";
+}, 5000);
+</script>
