@@ -44,7 +44,7 @@ body {
     -webkit-animation: slide-bottom 0.8s cubic-bezier(0.860, 0.000, 0.070, 1.000) both;
     animation: slide-bottom 0.8s cubic-bezier(0.860, 0.000, 0.070, 1.000) both;
 }
-.name {
+.usname {
     padding: 20px;
     background: #02041E;
     color: #fff;
@@ -54,7 +54,7 @@ body {
     width: 70%;
     text-align: center;
 }
-.name .nm {
+.usname .nm {
     color: #00dae8;
     font-style: italic;
     
