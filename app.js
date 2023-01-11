@@ -56,5 +56,8 @@ app.use(contacts);
 app.get('/', (req, res) => {
     res.render('index')
 })
+app.get('/home', (req, res) => {
+  res.render('home')
+})
 
 app.listen(PORT, () => console.log(`App listening on port ${PORT}!`))
