@@ -14,7 +14,7 @@ app.get('/blogs', (req, res) => {
           res.render('error');
         } else {
           blog.reverse();
-          res.render('blogs', { blog: blog, pop });
+          res.render('blogs', { blog: blog });
         }
     }).limit(6);
 })
