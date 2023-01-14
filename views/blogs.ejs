@@ -6,7 +6,6 @@
     <link rel="stylesheet" href="style.css">
     <link rel="icon" href="/images/icon.png" >
     <link rel="stylesheet" href="style-blog.css">
-    <script src="./navbar.js"></script>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Blogs</title>
 
@@ -14,41 +13,43 @@
 <body>
     <%- include("./partials/navbar") %>
     <%- include('./partials/loading') %>
-    <script>
-            document.getElementById('loading').style.display = 'flex';
-            // Hide the loading screen when the page is fully loaded
-            window.onload = function() {
-            document.getElementById('loading').style.display = 'none';
-            }
-    </script>
+
     <div id="pp">
         <p>Like the Content? Donate For More.</p>
         <button>Donate</button>
         <b onclick="rehide()">Not Today</b>
     </div>
-    <script>
-        function myFunction(x) {
-            x.classList.toggle("l1");
-          }
-        setTimeout(function(){
-            document.getElementById("pp").style.display = "flex"
-          },6000); 
-        function rehide() {
-            document.getElementById("pp").style.display = "none"
-        }
-    </script>
-    <script>
-        function myFunction(x) {
-            x.classList.toggle("l1");
-          }
-        setTimeout(function(){
-            document.getElementById("pp").style.display = "flex"
-          },6000); 
-        function rehide() {
-            document.getElementById("pp").style.display = "none"
-          }
-    </script>
     <div class="blog">
+        
+        <div class="blogs-block">
+            <div class="tblog-cards fade">
+                <% for(let i = 0; i < blog.length ; i++) { %> 
+                <div class="tblog-card" href="/blog/<%=blog[i].bid %>">
+                    <a class="timage" href="/blog/<%=blog[i].bid %>" ><img src="/image/<%- blog[i].image  %>" alt="image"></a>
+                    <div class="tover">
+                        <div class="ttext">
+                            <%= blog[i].title  %> 
+                        </div>
+                        <!-- <div class="ico">
+                            <div class="like"><div class="l" onclick="myFunction(this)"></div><p>10</p></div>
+                        </div> -->
+                    </div>
+                </div>
+                <% } %> 
+            </div>
+        </div>
+        <div class="quote">
+            <div class="title">Daily Quote</div>
+            <div class="q-card">
+                <p>“You can’t connect the dots looking forward; 
+                    you can only connect them looking 
+                    backwards. So you have to trust 
+                    that the dots will somehow connect in
+                    your future.”
+                </p>
+                <img src="./images/img2.png" alt="man">
+            </div>
+        </div>
         <div class="blogs-block">
             <div class="title">Top</div>
             <div class="blog-cards">
@@ -67,19 +68,6 @@
                 <% } %> 
             </div>
         </div>
-        <div class="quote">
-            <div class="title">Daily Quote</div>
-            <div class="q-card">
-                <p>“You can’t connect the dots looking forward; 
-                    you can only connect them looking 
-                    backwards. So you have to trust 
-                    that the dots will somehow connect in
-                    your future.”
-                </p>
-                <img src="./images/img2.png" alt="man">
-            </div>
-        </div>
-        
         <div class="sug">
             <div class="box">
                 <div class="title">Want us to blog about Something? Write to us.</div>
@@ -94,5 +82,41 @@
         </div>
     </div>
     <%- include("./partials/footer") %>
+    <!-- Slideshow Animation  -->
+    <script> 
+        let slideIndex = 0;
+        showSlides();
+        function showSlides() {
+        let i;
+        let slides = document.getElementsByClassName("tblog-card");
+        for (i = 0; i < slides.length; i++) {
+            slides[i].style.display = "none";
+        }
+        slideIndex++;
+        if (slideIndex > slides.length) {slideIndex = 1}
+        slides[slideIndex-1].style.display = "flex";
+        setTimeout(showSlides, 6000); 
+        }
+    </script>
+    <!-- Loading Animation  -->
+    <script>
+        document.getElementById('loading').style.display = 'flex';
+        // Hide the loading screen when the page is fully loaded
+        window.onload = function() {
+        document.getElementById('loading').style.display = 'none';
+        }
+    </script>
+    <!-- Like and pop up -->
+    <script>
+        function myFunction(x) {
+            x.classList.toggle("l1");
+          }
+        setTimeout(function(){
+            document.getElementById("pp").style.display = "flex"
+          },75000); 
+        function rehide() {
+            document.getElementById("pp").style.display = "none"
+          }
+    </script>
 </body>
 </html>
