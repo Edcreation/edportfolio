@@ -216,7 +216,7 @@
     flex-direction: row;
     justify-content: space-around;
     align-items: center;
-    background: #02041E;
+    background: rgba(0, 0, 0, 0.581);
 
 }
 .q-card p {
