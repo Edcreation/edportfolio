@@ -21,6 +21,22 @@
             document.getElementById('loading').style.display = 'none';
             }
     </script>
+    <div id="pp">
+        <p>Like the Content? Donate For More.</p>
+        <button>Donate</button>
+        <b onclick="rehide()">Not Today</b>
+    </div>
+    <script>
+        function myFunction(x) {
+            x.classList.toggle("l1");
+          }
+        setTimeout(function(){
+            document.getElementById("pp").style.display = "flex"
+          },6000); 
+        function rehide() {
+            document.getElementById("pp").style.display = "none"
+        }
+    </script>
     <div class="blog">
         <div class="blogs-block">
             <div class="title">Top</div>

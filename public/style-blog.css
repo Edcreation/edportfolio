@@ -1,5 +1,56 @@
 
 /*-----------------------------Top BLock-----------------*/
+@-webkit-keyframes slide-left {
+    0% {
+      -webkit-transform: translateX(0);
+              transform: translateX(0);
+    }
+    100% {
+      -webkit-transform: translateX(-100px);
+              transform: translateX(-100px);
+    }
+  }
+  @keyframes slide-left {
+    0% {
+      -webkit-transform: translateX(0);
+              transform: translateX(0);
+    }
+    100% {
+      -webkit-transform: translateX(-100px);
+              transform: translateX(-100px);
+    }
+  }
+#pp {
+    display: none;
+    position: absolute;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 20px;
+    color: #010756;
+    font-weight: 600;
+    background: #f6e4e4;
+    border-radius: 8px;
+    bottom: 5px;
+    right: -100px;
+    -webkit-animation: slide-left 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+    animation: slide-left 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+}
+#pp button {
+    background: #00DAE8;
+    border: none;
+    outline: none;
+    font-weight: 500;
+    padding: 8px;
+    border-radius: 5px;
+}
+#pp b {
+    margin-top: 10px;
+    text-decoration: underline;
+    font-weight: 400;
+    font-size: 14px;
+    cursor: pointer;
+}
 .blog {
     color: #fff;
     display: flex;
