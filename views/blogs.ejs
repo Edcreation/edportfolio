@@ -37,6 +37,17 @@
             document.getElementById("pp").style.display = "none"
         }
     </script>
+    <script>
+        function myFunction(x) {
+            x.classList.toggle("l1");
+          }
+        setTimeout(function(){
+            document.getElementById("pp").style.display = "flex"
+          },6000); 
+        function rehide() {
+            document.getElementById("pp").style.display = "none"
+          }
+    </script>
     <div class="blog">
         <div class="blogs-block">
             <div class="title">Top</div>
@@ -49,7 +60,7 @@
                             <%= blog[i].title  %> 
                         </div>
                         <div class="ico">
-                            <div class="like"><img src="./images/like.png" alt="like"><p>10</p></div>
+                            <div class="like"><div class="l" onclick="myFunction(this)"></div><p>10</p></div>
                         </div>
                     </div>
                 </a>
