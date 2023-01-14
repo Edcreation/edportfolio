@@ -118,7 +118,7 @@
 .tblog-card {
     background: #000000;
     color: #fff;
-    border: 1px solid rgba(255, 255, 255, 0.392);
+    border: 1px solid #ffffff3e;
     display: none;
     flex-direction: column;
     justify-content: space-between;
@@ -154,7 +154,8 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    height: 10%;
+    height: 20%;
+    background: rgba(0, 0, 0, 0.417);
 }
 .tover .ttext {
     text-align: center;
