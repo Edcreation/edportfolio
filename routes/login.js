@@ -30,7 +30,8 @@ app.post("/login", passport.authenticate("local", {
     successRedirect: "/dashboard",
     failureRedirect: "/login"
 }), function (req, res) {
-    var done = "Welcome"
+    // var done = "Welcome"
+    var done = "Failed!! Try Again"
     req.flash('pop-up', done);
 });
 
