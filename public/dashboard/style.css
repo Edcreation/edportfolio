@@ -347,9 +347,10 @@ nav {
     flex-direction: column;
     background: #02041E;
     padding: 10px;
-    height: 300px;
+    height: 500px;
     box-shadow: 8px 8px 20px 5px rgba(0, 0, 0, 0.25);
     margin-top: 20px;
+    margin-bottom: 30px;
 }
 .msg-box .title {
     width: 100%;
@@ -357,6 +358,15 @@ nav {
     font-size: 22px;
     color: #fff;
     margin-bottom: 10px;
+}
+.msg-box .title button {
+    background: #d00 ;
+    color: #cecece;
+    padding: 10px;
+    margin-left: 20px;
+    border: none;
+    outline: none;
+    cursor: pointer;
 }
 .msg-container {
     width: 100%;
@@ -367,12 +377,11 @@ nav {
 }
 .msg {
     width: 90%;
-    height: 40px;
+    height: 100%;
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
-    padding: 15px;
     margin-bottom: 10px;
     background: #05092E;
     cursor: pointer;
@@ -393,6 +402,7 @@ nav {
 }
 .msg .msg-icon img{
     width: 30px;
+    margin-left: 10px;
 }
 
 .msg .name {
@@ -400,7 +410,7 @@ nav {
     font-weight: 600;
     text-align: start;
     align-items: center;
-    text-decoration: underline;
+    text-transform: capitalize;
     width: 50%;
     margin-left: 10px;
 }
@@ -408,7 +418,8 @@ nav {
     height: 50px;
     text-overflow: ellipsis;
     overflow-y: hidden;
-    text-align:start;
+    display: flex;
+    justify-content: flex-start;
     align-items: center;
     width: 100%;
     border-left: 1px solid #00dae8;
@@ -432,7 +443,7 @@ nav {
 .msg .ops button:hover {
     background: #2c2c2c;
 }
-.msg .ops form button:hover {
+.msg .ops button:nth-child(2):hover {
     background: rgb(167, 0, 0);
 }
 .msg .ops button img {
@@ -468,12 +479,27 @@ nav {
     .dash-box {
         margin-top: 30px;
     }
+    .msg-container {
+        display: grid;
+        grid-template-columns: auto auto auto;
+        align-content: center;
+        gap: 10px;
+        margin: 0;
+        margin-top: 20px;
+        padding: 20px;
+        width: 80%;
+        overflow-y: hidden;
+    }
     .msg {
         flex-direction: column;
         height: auto;
+        width: 170px;
     }
     .msg .name {
         width: 100%;
+        text-align: center;
+        margin-left: 0;
+        margin-top: 10px;
     }
     
     .msg .ops {
@@ -488,6 +514,7 @@ nav {
         width: 100%;
         margin-top: 10px;
         border: none;
+        justify-content: center;
     }
 
 }
